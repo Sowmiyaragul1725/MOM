@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MOMDetailViewController" customModule="MOM" customModuleProvider="target">
+            <connections>
+                <outlet property="addAndEditButton" destination="ndg-Os-0Sh" id="MVi-FG-kIc"/>
+                <outlet property="editIconButton" destination="AdX-8Q-sZx" id="qNE-rL-pWE"/>
+                <outlet property="navigationBar" destination="i0U-n1-6LV" id="hZB-nS-EIN"/>
+                <outlet property="notesTextView" destination="sKN-J6-qUW" id="Tah-2i-LJf"/>
+                <outlet property="selectDateButton" destination="16k-HP-Mea" id="nqh-BY-UQq"/>
+                <outlet property="selectDateTextField" destination="afp-mm-hQy" id="EO9-x5-mLh"/>
+                <outlet property="titleTextField" destination="OWk-7J-wSQ" id="IZm-uS-Z7i"/>
+                <outlet property="view" destination="iN0-l3-epB" id="0T3-4y-OIk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxY-Q2-B1d">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-O3-HW5">
+                            <rect key="frame" x="0.0" y="10" width="393" height="739"/>
+                            <subviews>
+                                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0U-n1-6LV">
+                                    <rect key="frame" x="0.0" y="0.0" width="362" height="44"/>
+                                    <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <items>
+                                        <navigationItem title="Meeting Notes" id="cc3-99-4Sx"/>
+                                    </items>
+                                </navigationBar>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdX-8Q-sZx">
+                                    <rect key="frame" x="362" y="11" width="21" height="22"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="square.and.pencil" catalog="system"/>
+                                    <connections>
+                                        <action selector="editTapped:" destination="-1" eventType="touchUpInside" id="6KT-XO-ZcO"/>
+                                    </connections>
+                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jbm-u2-q3s">
+                                    <rect key="frame" x="15" y="59" width="363" height="640"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OWk-7J-wSQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="363" height="81"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="afp-mm-hQy">
+                                            <rect key="frame" x="0.0" y="91" width="363" height="34"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter your notes..." translatesAutoresizingMaskIntoConstraints="NO" id="sKN-J6-qUW">
+                                            <rect key="frame" x="0.0" y="135" width="363" height="505"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16k-HP-Mea">
+                                    <rect key="frame" x="15" y="150" width="363" height="34"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="SelectDateTapped:" destination="-1" eventType="touchUpInside" id="9aZ-jN-1hM"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndg-Os-0Sh">
+                                    <rect key="frame" x="121.66666666666669" y="689" width="150" height="40"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="sGK-De-vHB"/>
+                                        <constraint firstAttribute="width" constant="150" id="sjj-zD-TwL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Add">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="addNotesTapped:" destination="-1" eventType="touchUpInside" id="X2u-M4-sqe"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Jbm-u2-q3s" firstAttribute="bottom" secondItem="ndg-Os-0Sh" secondAttribute="top" constant="10" id="30n-r7-30d"/>
+                                <constraint firstItem="16k-HP-Mea" firstAttribute="trailing" secondItem="afp-mm-hQy" secondAttribute="trailing" id="7ee-gk-feK"/>
+                                <constraint firstItem="Jbm-u2-q3s" firstAttribute="top" secondItem="i0U-n1-6LV" secondAttribute="bottom" constant="15" id="Esw-6d-r3a"/>
+                                <constraint firstItem="16k-HP-Mea" firstAttribute="leading" secondItem="afp-mm-hQy" secondAttribute="leading" id="FJ9-sq-43m"/>
+                                <constraint firstAttribute="trailing" secondItem="Jbm-u2-q3s" secondAttribute="trailing" constant="15" id="KRi-ZL-cg2"/>
+                                <constraint firstItem="i0U-n1-6LV" firstAttribute="top" secondItem="o6o-O3-HW5" secondAttribute="top" id="OK1-PK-ixB"/>
+                                <constraint firstItem="16k-HP-Mea" firstAttribute="bottom" secondItem="afp-mm-hQy" secondAttribute="bottom" id="SgQ-27-WJO"/>
+                                <constraint firstItem="AdX-8Q-sZx" firstAttribute="leading" secondItem="i0U-n1-6LV" secondAttribute="trailing" id="TJq-XZ-dnx"/>
+                                <constraint firstAttribute="bottom" secondItem="ndg-Os-0Sh" secondAttribute="bottom" constant="10" id="UL5-i5-rq9"/>
+                                <constraint firstItem="i0U-n1-6LV" firstAttribute="leading" secondItem="o6o-O3-HW5" secondAttribute="leading" id="a5N-l7-wVW"/>
+                                <constraint firstItem="AdX-8Q-sZx" firstAttribute="centerY" secondItem="i0U-n1-6LV" secondAttribute="centerY" id="fXF-3P-XaY"/>
+                                <constraint firstItem="16k-HP-Mea" firstAttribute="top" secondItem="afp-mm-hQy" secondAttribute="top" id="gqd-UE-Q8u"/>
+                                <constraint firstAttribute="trailing" secondItem="AdX-8Q-sZx" secondAttribute="trailing" constant="10" id="k6P-hb-lm9"/>
+                                <constraint firstItem="Jbm-u2-q3s" firstAttribute="leading" secondItem="o6o-O3-HW5" secondAttribute="leading" constant="15" id="xEw-02-Pdx"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="o6o-O3-HW5" firstAttribute="leading" secondItem="oxY-Q2-B1d" secondAttribute="leading" id="UmG-Tk-5Nv"/>
+                        <constraint firstItem="ndg-Os-0Sh" firstAttribute="centerX" secondItem="oxY-Q2-B1d" secondAttribute="centerX" id="VSh-xY-AOR"/>
+                        <constraint firstItem="o6o-O3-HW5" firstAttribute="top" secondItem="oxY-Q2-B1d" secondAttribute="top" constant="10" id="aCo-6H-0ZO"/>
+                        <constraint firstAttribute="bottom" secondItem="o6o-O3-HW5" secondAttribute="bottom" constant="10" id="nxl-dI-Ikv"/>
+                        <constraint firstAttribute="trailing" secondItem="o6o-O3-HW5" secondAttribute="trailing" id="t9Z-Lh-do3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oxY-Q2-B1d" secondAttribute="trailing" id="7EU-EG-ldn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oxY-Q2-B1d" secondAttribute="bottom" id="I5z-bN-z87"/>
+                <constraint firstItem="oxY-Q2-B1d" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="MjY-y2-LLX"/>
+                <constraint firstItem="oxY-Q2-B1d" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="V1g-8r-lFH"/>
+            </constraints>
+            <point key="canvasLocation" x="27" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="square.and.pencil" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
